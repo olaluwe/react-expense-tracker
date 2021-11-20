@@ -1,6 +1,7 @@
 import React from "react";
 
 import ExpenseItem from "./ExpenseItem";
+import "./ExpensesList.css";
 
 const ExpensesList = (props) => {
   if (props.expensesItem.length === 0) {
@@ -8,7 +9,7 @@ const ExpensesList = (props) => {
   }
 
   return (
-    <ul>
+    <ul className="expenses-list">
       {props.expensesItem.map((filteredItem) => (
         <ExpenseItem
           key={filteredItem.id}
